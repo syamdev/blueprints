@@ -1,7 +1,7 @@
 from flask import Flask
-from blueprints.home.views import mod1
-from blueprints.about.views import mod2
+from blueprints.home.views import home
+from blueprints.about.views import about
 
 app = Flask(__name__)
-app.register_blueprint(mod1, url_prefix='/home')
-app.register_blueprint(mod2, url_prefix='/about')
+app.register_blueprint(home, url_prefix='/home')
+app.register_blueprint(about, url_prefix='/about')
